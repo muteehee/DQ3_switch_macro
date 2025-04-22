@@ -20,6 +20,20 @@ It simulates precise controller input via HID to automate movement and A-button 
 - USB cable (Micro-B)
 - USB-A to USB-C adapter (if connecting directly to Switch)
 
+## 🛠️ Development Environment
+
+This project was developed and tested on **macOS**.  
+Please note that file paths (such as `~/Library/Arduino15/...`) may differ on Windows or Linux environments.
+
+## 📦 Required Library: SwitchControlLibrary
+This project uses SwitchControlLibrary
+by procon-oss, which enables Arduino to act as a Switch controller via HID.
+
+You can install it via the Arduino Library Manager by searching for "SwitchControlLibrary",
+or download it directly from GitHub:
+
+👉 https://github.com/celclow/SwitchControlLibrary
+
 
 ## 🚀 Usage Instructions
 
@@ -54,3 +68,22 @@ void loop() {
   SwitchControlLibrary().MoveLeftStick(0, 128);
   delay(200);
 }
+```
+
+## 🧾 In-game Setup (for DQ3 Remake on Switch)
+
+To use the macro effectively, prepare your game environment as follows:
+
+1. Move your character to a **leveling-friendly zone** (where enemies appear frequently).
+2. Ensure there are **no walls or obstacles on the left and right** of the character.  
+   Open fields are ideal for uninterrupted movement.
+3. Set battle speed to **"超はやい (Fastest)"** in game settings for quicker battles.
+4. Use **handheld mode** (not docked) for compatibility with USB HID via adapter.
+5. Enable **"楽ちんプレイ (Easy Mode)"** to allow infinite auto-battling without death depletion.
+
+（日本語まとめ）
+- レベル上げゾーンにキャラを配置
+- 左右に壁や障害物がない場所（フィールド推奨）
+- 戦闘スピードは「超はやい」
+- 携帯モードで操作（USB接続の都合上）
+- 「楽ちんプレイ」をONにすることで、放置でも無限狩り可能
