@@ -38,13 +38,11 @@ Please note that file paths (such as `~/Library/Arduino15/...`) may differ on Wi
 
 ## 📦 Required Library: SwitchControlLibrary
 
-This project uses [SwitchControlLibrary](https://github.com/celclow/SwitchControlLibrary) by [procon-oss](https://github.com/procon-oss),  
+This project uses [SwitchControlLibrary](https://github.com/celclow/SwitchControlLibrary)
 which enables Arduino to act as a Nintendo Switch controller via USB HID.
 
 You can install it via the Arduino Library Manager by searching for **"SwitchControlLibrary"**,  
 or download it directly from GitHub:
-
-👉 https://github.com/celclow/SwitchControlLibrary
 
 > 📌 Note: If you need to modify `boards.txt` or adjust VID/PID settings, please refer to the instructions on the library’s GitHub page or related documentation.
 
