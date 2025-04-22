@@ -1,0 +1,2 @@
+# DQ3_switch_macro
+Arduino LeonardoのHID機能を用いた、Nintendo Switch版ドラクエ3用の自動レベル上げマクロ
