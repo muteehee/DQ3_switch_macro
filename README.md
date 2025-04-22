@@ -6,6 +6,15 @@ It simulates precise controller input via HID to automate movement and A-button 
 （Nintendo Switch版ドラクエIIIリメイクでの自動レベル上げマクロ。ArduinoとSwitchControlLibraryを用いて、方向キー入力とAボタン連打を自動化します。）
 
 
+## 🎯 Why I Built This
+
+Repetitive grinding in RPGs is time-consuming and mentally exhausting.  
+I wanted to explore how automation could reduce that burden — not through emulator cheats,  
+but by controlling the actual Nintendo Switch hardware using an Arduino as a fake controller (HID spoofing).
+
+By developing this macro, I learned how microcontrollers can emulate gamepad inputs and interact with real hardware in a practical, hands-free way.
+
+
 ## 🎮 Features
 
 - Automates left-right movement and A-button mashing
@@ -20,19 +29,24 @@ It simulates precise controller input via HID to automate movement and A-button 
 - USB cable (Micro-B)
 - USB-A to USB-C adapter (if connecting directly to Switch)
 
+
 ## 🛠️ Development Environment
 
 This project was developed and tested on **macOS**.  
 Please note that file paths (such as `~/Library/Arduino15/...`) may differ on Windows or Linux environments.
 
-## 📦 Required Library: SwitchControlLibrary
-This project uses SwitchControlLibrary
-by procon-oss, which enables Arduino to act as a Switch controller via HID.
 
-You can install it via the Arduino Library Manager by searching for "SwitchControlLibrary",
+## 📦 Required Library: SwitchControlLibrary
+
+This project uses [SwitchControlLibrary](https://github.com/celclow/SwitchControlLibrary) by [procon-oss](https://github.com/procon-oss),  
+which enables Arduino to act as a Nintendo Switch controller via USB HID.
+
+You can install it via the Arduino Library Manager by searching for **"SwitchControlLibrary"**,  
 or download it directly from GitHub:
 
 👉 https://github.com/celclow/SwitchControlLibrary
+
+> 📌 Note: If you need to modify `boards.txt` or adjust VID/PID settings, please refer to the instructions on the library’s GitHub page or related documentation.
 
 
 ## 🚀 Usage Instructions
@@ -87,3 +101,17 @@ To use the macro effectively, prepare your game environment as follows:
 - 戦闘スピードは「超はやい」
 - 携帯モードで操作（USB接続の都合上）
 - 「楽ちんプレイ」をONにすることで、放置でも無限狩り可能
+
+
+## 🚀 Future Plans
+
+This project currently runs on a fixed loop of directional inputs and button presses.  
+In the future, I plan to extend it by integrating **real-time image recognition** via Python or OpenCV on a PC.
+
+The idea is to process video from the Switch (via HDMI capture),  
+then analyze game states (e.g., battle start, character status, level-up screen)  
+and dynamically send commands to the Arduino via serial interface.
+
+This would turn the bot from a simple macro into a semi-intelligent automation system.
+
+> Imagine a bot that only presses A when enemies appear, or stops grinding when HP is low.
